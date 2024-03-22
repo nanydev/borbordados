@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+
+body {
+  font-family: Petit Formaler Script, sans-serif;
+  margin: 0; /* Remova a margem padrão do corpo */
+}
+
+/********* HEADER ************/
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fecaca;
+}
+
+/*LOGO*/
+
+.logo-container {
+  margin-right: 5px; /* Espaçamento entre o logo e a navegação */
+}
+
+.logo img {
+  max-width: 100px;
+  padding: 2rem;
+}
+
+/*NAV*/
+
+.navbar a {
+  margin-right: 2rem; /* Espaçamento entre os itens de navegação */
+  text-decoration: none;
+  color: black;
+  padding: 2rem 3rem;
+  position: relative; /* Adiciona posição relativa para permitir a posição absoluta do pseudo-elemento */
+}
+/* Remove o sublinhado preto */
+.navbar a::after {
+  content: ""; /* Adiciona conteúdo ao pseudo-elemento */
+  position: absolute; /* Define a posição absoluta */
+  left: 0; /* Alinha o início do grifo com a borda esquerda do link */
+  bottom: 0; /* Alinha o grifo na parte inferior do link */
+  width: 100%; /* Define a largura do grifo para preencher todo o link */
+  height: 2px; /* Define a altura do grifo */
+  background-color: transparent; /* Define a cor de fundo transparente */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+}
+
+.navbar a:hover {
+  color: #ffffff;
+}
+/* Define estilos para o sublinhado branco quando passa o mouse */
+.navbar a:hover::after {
+  background-color: #ffffff; /* Altera a cor do sublinhado para branco ao passar o mouse */
+}
+
+/********* HEADER ************/
